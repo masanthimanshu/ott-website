@@ -26,7 +26,7 @@
 }
 
 .item:hover {
-  transform: scale(1.5) !important;
+  transform: scale(1.25) !important;
 }
 
 .img_1 {
