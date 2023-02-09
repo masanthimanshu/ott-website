@@ -22,7 +22,7 @@
   cursor: pointer;
   border-radius: 5px;
   background-size: cover;
-  transition: transform 300ms ease 150ms;
+  transition: transform 300ms ease 100ms;
 }
 
 .item:hover {

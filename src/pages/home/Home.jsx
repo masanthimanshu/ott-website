@@ -64,6 +64,11 @@ export const Home = () => {
           </Grid>
         </Grid>
       </Container>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
     </>
   );
 };
