@@ -1,0 +1,50 @@
+.top_sec {
+  height: 30rem;
+  display: grid;
+  background-size: cover;
+  background-position: top;
+  grid-template-columns: repeat(2, 1fr);
+  background-image: url(../../../public/images/poster1.png);
+}
+
+.top_sec .left,
+.top_sec .right {
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.top_sec .left {
+  display: flex;
+  align-items: flex-end;
+}
+
+.item {
+  height: 20rem;
+  cursor: pointer;
+  border-radius: 5px;
+  background-size: cover;
+  transition: transform 300ms ease 150ms;
+}
+
+.item:hover {
+  transform: scale(1.5) !important;
+}
+
+.img_1 {
+  background-image: url(../../../public/images/movie-banner1.png);
+}
+
+.img_2 {
+  background-image: url(../../../public/images/movie-banner2.png);
+}
+
+.img_3 {
+  background-image: url(../../../public/images/movie-banner3.png);
+}
+
+.img_4 {
+  background-image: url(../../../public/images/movie-banner4.png);
+}
+
+.img_5 {
+  background-image: url(../../../public/images/movie-banner5.png);
+}
