@@ -1,6 +1,8 @@
+import "./style.css";
+import "swiper/css/bundle";
+
 import { Routes, Route } from "react-router-dom";
 import { Home } from "./pages";
-import "./style.css";
 
 export const Router = () => {
   return (

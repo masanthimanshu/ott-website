@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Container, Box, Grid, Button, Typography } from "@mui/material";
 
 export const Header = () => {
@@ -5,7 +6,13 @@ export const Header = () => {
     <Container sx={{ pt: 2, pb: 2 }}>
       <Grid container>
         <Grid item md={3}>
-          <img style={{ height: "2.5rem" }} src="/images/logo.png" alt="Logo" />
+          <Link to="/">
+            <img
+              style={{ height: "2.5rem", width: "auto" }}
+              src="/images/logo.png"
+              alt="Logo"
+            />
+          </Link>
         </Grid>
         <Grid item md={6}>
           <Grid container spacing={4}>

@@ -18,33 +18,10 @@
 }
 
 .item {
-  height: 20rem;
   cursor: pointer;
-  border-radius: 5px;
-  background-size: cover;
   transition: transform 300ms ease 100ms;
 }
 
 .item:hover {
   transform: scale(1.25) !important;
-}
-
-.img_1 {
-  background-image: url(../../../public/images/movie-banner1.png);
-}
-
-.img_2 {
-  background-image: url(../../../public/images/movie-banner2.png);
-}
-
-.img_3 {
-  background-image: url(../../../public/images/movie-banner3.png);
-}
-
-.img_4 {
-  background-image: url(../../../public/images/movie-banner4.png);
-}
-
-.img_5 {
-  background-image: url(../../../public/images/movie-banner5.png);
 }
