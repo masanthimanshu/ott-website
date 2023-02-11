@@ -15,56 +15,70 @@ export const Header = () => {
           </Link>
         </Grid>
         <Grid item md={8}>
-          <Grid container spacing={4} textAlign="right">
+          <Grid container spacing={4} sx={{ pt: 0.5, textAlign: "right" }}>
             <Grid item md={2}>
               <Button variant="text">
-                <Typography color="white">
-                  <b>Home</b>
-                </Typography>
+                <Link to="/">
+                  <Typography color="white">
+                    <b>Home</b>
+                  </Typography>
+                </Link>
               </Button>
             </Grid>
             <Grid item md={2}>
               <Button variant="text">
-                <Typography color="white">
-                  <b>Shows</b>
-                </Typography>
+                <Link to="/shows">
+                  <Typography color="white">
+                    <b>Shows</b>
+                  </Typography>
+                </Link>
               </Button>
             </Grid>
             <Grid item md={2}>
               <Button variant="text">
-                <Typography color="white">
-                  <b>Movies</b>
-                </Typography>
+                <Link to="/movies">
+                  <Typography color="white">
+                    <b>Movies</b>
+                  </Typography>
+                </Link>
               </Button>
             </Grid>
             <Grid item md={2}>
               <Button variant="text">
-                <Typography color="white">
-                  <b>News</b>
-                </Typography>
+                <Link to="/news">
+                  <Typography color="white">
+                    <b>News</b>
+                  </Typography>
+                </Link>
               </Button>
             </Grid>
             <Grid item md={2}>
               <Button variant="text">
-                <Typography color="white">
-                  <b>Kids</b>
-                </Typography>
+                <Link to="/kids">
+                  <Typography color="white">
+                    <b>Kids</b>
+                  </Typography>
+                </Link>
               </Button>
             </Grid>
             <Grid item md={2}>
               <Button variant="text">
-                <Typography color="white">
-                  <b>Music</b>
-                </Typography>
+                <Link to="/music">
+                  <Typography color="white">
+                    <b>Music</b>
+                  </Typography>
+                </Link>
               </Button>
             </Grid>
           </Grid>
         </Grid>
         <Grid item md={2}>
           <Box textAlign="right">
-            <Button variant="contained" color="error">
-              <b>Login</b>
-            </Button>
+            <Link to="/login">
+              <Button variant="contained" color="error">
+                <b>Login</b>
+              </Button>
+            </Link>
           </Box>
         </Grid>
       </Grid>

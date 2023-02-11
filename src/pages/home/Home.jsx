@@ -1,8 +1,6 @@
 import { Navigation } from "swiper";
 import data from "../../data/ImageData.json";
 import { PlayArrow } from "@mui/icons-material";
-import { Header } from "../../components/Header";
-import { Footer } from "../../components/Footer";
 import style from "../../assets/style.module.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Box, Typography, Button, Container, Grid } from "@mui/material";
@@ -10,7 +8,6 @@ import { Box, Typography, Button, Container, Grid } from "@mui/material";
 export const Home = () => {
   return (
     <>
-      <Header />
       <section
         className={style.top_sec}
         style={{ backgroundImage: "url('/images/poster1.png')" }}
@@ -106,7 +103,6 @@ export const Home = () => {
           })}
         </Swiper>
       </Container>
-      <Footer />
     </>
   );
 };
