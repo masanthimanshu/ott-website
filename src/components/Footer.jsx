@@ -5,7 +5,7 @@ import { Grid, Container, Box, Typography, IconButton } from "@mui/material";
 export const Footer = () => {
   return (
     <>
-      <Container sx={{ mb: 5 }}>
+      <Container maxWidth="xl" sx={{ mb: 5 }}>
         <Grid container spacing={5}>
           <Grid item md={6}>
             <Link to="/">

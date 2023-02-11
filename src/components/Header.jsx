@@ -3,9 +3,9 @@ import { Container, Box, Grid, Button, Typography } from "@mui/material";
 
 export const Header = () => {
   return (
-    <Container sx={{ pt: 2, pb: 2 }}>
+    <Container maxWidth="xl" sx={{ pt: 2, pb: 2 }}>
       <Grid container>
-        <Grid item md={3}>
+        <Grid item md={2}>
           <Link to="/">
             <img
               style={{ height: "2.5rem", width: "auto" }}
@@ -14,8 +14,8 @@ export const Header = () => {
             />
           </Link>
         </Grid>
-        <Grid item md={6}>
-          <Grid container spacing={4}>
+        <Grid item md={8}>
+          <Grid container spacing={4} textAlign="right">
             <Grid item md={2}>
               <Button variant="text">
                 <Typography color="white">
@@ -60,8 +60,8 @@ export const Header = () => {
             </Grid>
           </Grid>
         </Grid>
-        <Grid item md={3}>
-          <Box sx={{ textAlign: "right" }}>
+        <Grid item md={2}>
+          <Box textAlign="right">
             <Button variant="contained" color="error">
               <b>Login</b>
             </Button>

@@ -1,0 +1,24 @@
+{
+  "featured": [
+    "/images/movie-banner1.png",
+    "/images/movie-banner2.png",
+    "/images/movie-banner3.png",
+    "/images/movie-banner4.png",
+    "/images/movie-banner5.png",
+    "/images/movie-banner6.png"
+  ],
+  "cards": [
+    "/images/movie-banner1.png",
+    "/images/movie-banner2.png",
+    "/images/movie-banner3.png",
+    "/images/movie-banner4.png",
+    "/images/movie-banner5.png",
+    "/images/movie-banner6.png",
+    "/images/movie-banner1.png",
+    "/images/movie-banner2.png",
+    "/images/movie-banner3.png",
+    "/images/movie-banner4.png",
+    "/images/movie-banner5.png",
+    "/images/movie-banner6.png"
+  ]
+}

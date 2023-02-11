@@ -1,278 +1,109 @@
 import { Navigation } from "swiper";
-import style from "./style.module.css";
+import data from "../../data/ImageData.json";
 import { PlayArrow } from "@mui/icons-material";
+import { Header } from "../../components/Header";
+import { Footer } from "../../components/Footer";
+import style from "../../assets/style.module.css";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Header } from "../../components/header/Header";
-import { Footer } from "../../components/footer/Footer";
 import { Box, Typography, Button, Container, Grid } from "@mui/material";
 
 export const Home = () => {
   return (
     <>
       <Header />
-      <section className={style.top_sec}>
-        <div className={style.left}>
-          <Container>
-            <Typography variant="h2">
-              <b>PATHAAN</b>
-            </Typography>
-            <br />
-            <Typography>
-              <b>Hindi || Action, Drama, Spy</b>
-            </Typography>
-            <br />
-            <Typography>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Temporibus recusandae ipsa cupiditate quibusdam corporis! Earum
-              debitis accusantium architecto enim asperiores ullam pariatur.
-              Magni quaerat labore culpa assumenda praesentium officia facere?
-            </Typography>
-            <br />
-            <br />
-            <Button variant="contained" color="error">
-              <PlayArrow /> &nbsp;&nbsp;
-              <b>Play Now</b>
-            </Button>
-            <br />
-            <br />
-            <br />
-            <br />
-          </Container>
-        </div>
-        <div className={style.right}></div>
+      <section
+        className={style.top_sec}
+        style={{ backgroundImage: "url('/images/poster1.png')" }}
+      >
+        <Container maxWidth="xl">
+          <Grid container>
+            <Grid item md={6}>
+              <Box sx={{ mt: 5 }}>
+                <Typography variant="h2">
+                  <b>PATHAAN</b>
+                </Typography>
+                <br />
+                <Typography>
+                  <b>Hindi || Action, Drama, Spy</b>
+                </Typography>
+                <br />
+                <Typography>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Temporibus recusandae ipsa cupiditate quibusdam corporis!
+                  Earum debitis accusantium architecto enim asperiores ullam
+                  pariatur. Magni quaerat labore culpa assumenda praesentium
+                  officia facere?
+                </Typography>
+                <br />
+                <br />
+                <Button variant="contained" color="error">
+                  <PlayArrow />
+                  &nbsp;&nbsp;&nbsp;
+                  <b>Play Now</b>
+                </Button>
+              </Box>
+            </Grid>
+          </Grid>
+        </Container>
       </section>
-      <Container sx={{ mt: 10, mb: 10 }}>
+      <Container maxWidth="xl" sx={{ mt: 10, mb: 10 }}>
         <Typography variant="h5">Featured Shows</Typography>
         <br />
         <Grid container spacing={1}>
-          <Grid item md={2}>
-            <div className={style.item}>
-              <img src="/images/movie-banner1.png" alt="Card" />
-            </div>
-          </Grid>
-          <Grid item md={2}>
-            <div className={style.item}>
-              <img src="/images/movie-banner2.png" alt="Card" />
-            </div>
-          </Grid>
-          <Grid item md={2}>
-            <div className={style.item}>
-              <img src="/images/movie-banner3.png" alt="Card" />
-            </div>
-          </Grid>
-          <Grid item md={2}>
-            <div className={style.item}>
-              <img src="/images/movie-banner4.png" alt="Card" />
-            </div>
-          </Grid>
-          <Grid item md={2}>
-            <div className={style.item}>
-              <img src="/images/movie-banner5.png" alt="Card" />
-            </div>
-          </Grid>
-          <Grid item md={2}>
-            <div className={style.item}>
-              <img src="/images/movie-banner6.png" alt="Card" />
-            </div>
-          </Grid>
+          {data.featured.map((e, index) => {
+            return (
+              <Grid key={index} item md={2}>
+                <div className={style.item}>
+                  <img src={e} alt="Card" />
+                </div>
+              </Grid>
+            );
+          })}
         </Grid>
       </Container>
-      <Container sx={{ mt: 10, mb: 10 }}>
+      <Container maxWidth="xl" sx={{ mt: 10, mb: 10 }}>
         <Typography variant="h5">Latest Movies</Typography>
         <br />
         <Swiper modules={[Navigation]} slidesPerView={5} navigation>
-          <SwiperSlide>
-            <Box sx={{ p: 1 }}>
-              <img src="/images/movie-banner1.png" alt="Card" />
-            </Box>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Box sx={{ p: 1 }}>
-              <img src="/images/movie-banner2.png" alt="Card" />
-            </Box>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Box sx={{ p: 1 }}>
-              <img src="/images/movie-banner3.png" alt="Card" />
-            </Box>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Box sx={{ p: 1 }}>
-              <img src="/images/movie-banner4.png" alt="Card" />
-            </Box>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Box sx={{ p: 1 }}>
-              <img src="/images/movie-banner5.png" alt="Card" />
-            </Box>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Box sx={{ p: 1 }}>
-              <img src="/images/movie-banner6.png" alt="Card" />
-            </Box>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Box sx={{ p: 1 }}>
-              <img src="/images/movie-banner1.png" alt="Card" />
-            </Box>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Box sx={{ p: 1 }}>
-              <img src="/images/movie-banner2.png" alt="Card" />
-            </Box>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Box sx={{ p: 1 }}>
-              <img src="/images/movie-banner3.png" alt="Card" />
-            </Box>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Box sx={{ p: 1 }}>
-              <img src="/images/movie-banner4.png" alt="Card" />
-            </Box>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Box sx={{ p: 1 }}>
-              <img src="/images/movie-banner5.png" alt="Card" />
-            </Box>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Box sx={{ p: 1 }}>
-              <img src="/images/movie-banner6.png" alt="Card" />
-            </Box>
-          </SwiperSlide>
+          {data.cards.map((e, index) => {
+            return (
+              <SwiperSlide key={index}>
+                <Box sx={{ p: 1 }}>
+                  <img src={e} alt="Card" />
+                </Box>
+              </SwiperSlide>
+            );
+          })}
         </Swiper>
       </Container>
-      <Container sx={{ mt: 10, mb: 10 }}>
+      <Container maxWidth="xl" sx={{ mt: 10, mb: 10 }}>
         <Typography variant="h5">Top Web Series</Typography>
         <br />
         <Swiper modules={[Navigation]} slidesPerView={5} navigation>
-          <SwiperSlide>
-            <Box sx={{ p: 1 }}>
-              <img src="/images/movie-banner1.png" alt="Card" />
-            </Box>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Box sx={{ p: 1 }}>
-              <img src="/images/movie-banner2.png" alt="Card" />
-            </Box>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Box sx={{ p: 1 }}>
-              <img src="/images/movie-banner3.png" alt="Card" />
-            </Box>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Box sx={{ p: 1 }}>
-              <img src="/images/movie-banner4.png" alt="Card" />
-            </Box>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Box sx={{ p: 1 }}>
-              <img src="/images/movie-banner5.png" alt="Card" />
-            </Box>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Box sx={{ p: 1 }}>
-              <img src="/images/movie-banner6.png" alt="Card" />
-            </Box>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Box sx={{ p: 1 }}>
-              <img src="/images/movie-banner1.png" alt="Card" />
-            </Box>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Box sx={{ p: 1 }}>
-              <img src="/images/movie-banner2.png" alt="Card" />
-            </Box>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Box sx={{ p: 1 }}>
-              <img src="/images/movie-banner3.png" alt="Card" />
-            </Box>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Box sx={{ p: 1 }}>
-              <img src="/images/movie-banner4.png" alt="Card" />
-            </Box>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Box sx={{ p: 1 }}>
-              <img src="/images/movie-banner5.png" alt="Card" />
-            </Box>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Box sx={{ p: 1 }}>
-              <img src="/images/movie-banner6.png" alt="Card" />
-            </Box>
-          </SwiperSlide>
+          {data.cards.map((e, index) => {
+            return (
+              <SwiperSlide key={index}>
+                <Box sx={{ p: 1 }}>
+                  <img src={e} alt="Card" />
+                </Box>
+              </SwiperSlide>
+            );
+          })}
         </Swiper>
       </Container>
-      <Container sx={{ mt: 10, mb: 10 }}>
+      <Container maxWidth="xl" sx={{ mt: 10, mb: 10 }}>
         <Typography variant="h5">Trending Shows</Typography>
         <br />
         <Swiper modules={[Navigation]} slidesPerView={5} navigation>
-          <SwiperSlide>
-            <Box sx={{ p: 1 }}>
-              <img src="/images/movie-banner1.png" alt="Card" />
-            </Box>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Box sx={{ p: 1 }}>
-              <img src="/images/movie-banner2.png" alt="Card" />
-            </Box>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Box sx={{ p: 1 }}>
-              <img src="/images/movie-banner3.png" alt="Card" />
-            </Box>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Box sx={{ p: 1 }}>
-              <img src="/images/movie-banner4.png" alt="Card" />
-            </Box>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Box sx={{ p: 1 }}>
-              <img src="/images/movie-banner5.png" alt="Card" />
-            </Box>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Box sx={{ p: 1 }}>
-              <img src="/images/movie-banner6.png" alt="Card" />
-            </Box>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Box sx={{ p: 1 }}>
-              <img src="/images/movie-banner1.png" alt="Card" />
-            </Box>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Box sx={{ p: 1 }}>
-              <img src="/images/movie-banner2.png" alt="Card" />
-            </Box>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Box sx={{ p: 1 }}>
-              <img src="/images/movie-banner3.png" alt="Card" />
-            </Box>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Box sx={{ p: 1 }}>
-              <img src="/images/movie-banner4.png" alt="Card" />
-            </Box>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Box sx={{ p: 1 }}>
-              <img src="/images/movie-banner5.png" alt="Card" />
-            </Box>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Box sx={{ p: 1 }}>
-              <img src="/images/movie-banner6.png" alt="Card" />
-            </Box>
-          </SwiperSlide>
+          {data.cards.map((e, index) => {
+            return (
+              <SwiperSlide key={index}>
+                <Box sx={{ p: 1 }}>
+                  <img src={e} alt="Card" />
+                </Box>
+              </SwiperSlide>
+            );
+          })}
         </Swiper>
       </Container>
       <Footer />
