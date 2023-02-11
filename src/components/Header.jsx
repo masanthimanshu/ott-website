@@ -17,58 +17,58 @@ export const Header = () => {
         <Grid item md={8}>
           <Grid container spacing={4} sx={{ pt: 0.5, textAlign: "right" }}>
             <Grid item md={2}>
-              <Button variant="text">
-                <Link to="/">
+              <Link to="/">
+                <Button variant="text">
                   <Typography color="white">
                     <b>Home</b>
                   </Typography>
-                </Link>
-              </Button>
+                </Button>
+              </Link>
             </Grid>
             <Grid item md={2}>
-              <Button variant="text">
-                <Link to="/shows">
+              <Link to="/shows">
+                <Button variant="text">
                   <Typography color="white">
                     <b>Shows</b>
                   </Typography>
-                </Link>
-              </Button>
+                </Button>
+              </Link>
             </Grid>
             <Grid item md={2}>
-              <Button variant="text">
-                <Link to="/movies">
+              <Link to="/movies">
+                <Button variant="text">
                   <Typography color="white">
                     <b>Movies</b>
                   </Typography>
-                </Link>
-              </Button>
+                </Button>
+              </Link>
             </Grid>
             <Grid item md={2}>
-              <Button variant="text">
-                <Link to="/news">
+              <Link to="/news">
+                <Button variant="text">
                   <Typography color="white">
                     <b>News</b>
                   </Typography>
-                </Link>
-              </Button>
+                </Button>
+              </Link>
             </Grid>
             <Grid item md={2}>
-              <Button variant="text">
-                <Link to="/kids">
+              <Link to="/kids">
+                <Button variant="text">
                   <Typography color="white">
                     <b>Kids</b>
                   </Typography>
-                </Link>
-              </Button>
+                </Button>
+              </Link>
             </Grid>
             <Grid item md={2}>
-              <Button variant="text">
-                <Link to="/music">
+              <Link to="/music">
+                <Button variant="text">
                   <Typography color="white">
                     <b>Music</b>
                   </Typography>
-                </Link>
-              </Button>
+                </Button>
+              </Link>
             </Grid>
           </Grid>
         </Grid>

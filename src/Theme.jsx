@@ -1,3 +1,7 @@
-export const Theme = () => {
-  return <div>Theme</div>;
-};
+import { createTheme } from "@mui/material";
+
+export const Theme = createTheme({
+  typography: {
+    fontFamily: "Montserrat",
+  },
+});
