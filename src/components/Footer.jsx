@@ -49,13 +49,13 @@ export const Footer = () => {
               </Typography>
               <br />
               <br />
-              <Link to="#">
+              <Link to="/about">
                 <Typography sx={{ mb: 1 }}>About Us</Typography>
               </Link>
-              <Link to="#">
+              <Link to="/contact">
                 <Typography sx={{ mb: 1 }}>Contact Us</Typography>
               </Link>
-              <Link to="#">
+              <Link to="/faq">
                 <Typography sx={{ mb: 1 }}>FAQ</Typography>
               </Link>
             </Box>
@@ -67,22 +67,22 @@ export const Footer = () => {
               </Typography>
               <br />
               <br />
-              <Link to="#">
+              <Link to="/">
                 <Typography sx={{ mb: 1 }}>Home</Typography>
               </Link>
-              <Link to="#">
+              <Link to="/shows">
                 <Typography sx={{ mb: 1 }}>Shows</Typography>
               </Link>
-              <Link to="#">
+              <Link to="/movies">
                 <Typography sx={{ mb: 1 }}>Movies</Typography>
               </Link>
-              <Link to="#">
+              <Link to="/news">
                 <Typography sx={{ mb: 1 }}>News</Typography>
               </Link>
-              <Link to="#">
+              <Link to="/kids">
                 <Typography sx={{ mb: 1 }}>Kids</Typography>
               </Link>
-              <Link to="#">
+              <Link to="/music">
                 <Typography sx={{ mb: 1 }}>Music</Typography>
               </Link>
             </Box>

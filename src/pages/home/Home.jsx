@@ -1,4 +1,5 @@
 import { Navigation } from "swiper";
+import { Link } from "react-router-dom";
 import data from "../../data/ImageData.json";
 import { PlayArrow } from "@mui/icons-material";
 import { Header } from "../../components/Header";
@@ -36,11 +37,13 @@ export const Home = () => {
                 </Typography>
                 <br />
                 <br />
-                <Button variant="contained" color="error">
-                  <PlayArrow />
-                  &nbsp;&nbsp;&nbsp;
-                  <b>Play Now</b>
-                </Button>
+                <Link to="#">
+                  <Button variant="contained" color="error">
+                    <PlayArrow />
+                    &nbsp;&nbsp;&nbsp;
+                    <b>Play Now</b>
+                  </Button>
+                </Link>
               </Box>
             </Grid>
           </Grid>
@@ -53,9 +56,11 @@ export const Home = () => {
           {data.featured.map((e, index) => {
             return (
               <Grid key={index} item md={2}>
-                <div className={style.item}>
-                  <img src={e} alt="Card" />
-                </div>
+                <Link to="#">
+                  <div className={style.item}>
+                    <img src={e} alt="Card" />
+                  </div>
+                </Link>
               </Grid>
             );
           })}
@@ -68,9 +73,11 @@ export const Home = () => {
           {data.cards.map((e, index) => {
             return (
               <SwiperSlide key={index}>
-                <Box sx={{ p: 1 }}>
-                  <img src={e} alt="Card" />
-                </Box>
+                <Link to="#">
+                  <Box sx={{ p: 1 }}>
+                    <img src={e} alt="Card" />
+                  </Box>
+                </Link>
               </SwiperSlide>
             );
           })}
@@ -83,9 +90,11 @@ export const Home = () => {
           {data.cards.map((e, index) => {
             return (
               <SwiperSlide key={index}>
-                <Box sx={{ p: 1 }}>
-                  <img src={e} alt="Card" />
-                </Box>
+                <Link to="#">
+                  <Box sx={{ p: 1 }}>
+                    <img src={e} alt="Card" />
+                  </Box>
+                </Link>
               </SwiperSlide>
             );
           })}
@@ -98,9 +107,11 @@ export const Home = () => {
           {data.cards.map((e, index) => {
             return (
               <SwiperSlide key={index}>
-                <Box sx={{ p: 1 }}>
-                  <img src={e} alt="Card" />
-                </Box>
+                <Link to="#">
+                  <Box sx={{ p: 1 }}>
+                    <img src={e} alt="Card" />
+                  </Box>
+                </Link>
               </SwiperSlide>
             );
           })}

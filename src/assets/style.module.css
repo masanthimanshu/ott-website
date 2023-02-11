@@ -7,7 +7,6 @@
 }
 
 .item {
-  cursor: pointer;
   transition: transform 300ms ease 100ms;
 }
 

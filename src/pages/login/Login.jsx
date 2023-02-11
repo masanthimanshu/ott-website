@@ -71,7 +71,7 @@ export const Login = () => {
           <br />
           <Typography textAlign="center">
             Didn't Have An Account ? &nbsp;
-            <Link to="#">Sign Up</Link>
+            <Link to="/sign-up">Sign Up</Link>
           </Typography>
         </Container>
       </section>
