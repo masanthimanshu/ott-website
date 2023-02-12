@@ -2,7 +2,7 @@ import "swiper/css/bundle";
 import "./assets/style.css";
 
 import { Routes, Route } from "react-router-dom";
-import { Home, Shows, Kids, Movies, Music, News, Login } from "./pages";
+import { Home, Shows, Kids, Movies, Music, News, Login, Player } from "./pages";
 
 export const Router = () => {
   return (
@@ -14,6 +14,7 @@ export const Router = () => {
       <Route path="/music" element={<Music />} />
       <Route path="/login" element={<Login />} />
       <Route path="/movies" element={<Movies />} />
+      <Route path="/player/:videoId" element={<Player />} />
     </Routes>
   );
 };

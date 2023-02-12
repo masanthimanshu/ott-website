@@ -56,7 +56,7 @@ export const Home = () => {
           {data.featured.map((e, index) => {
             return (
               <Grid key={index} item md={2}>
-                <Link to="#">
+                <Link to="/player/1234">
                   <div className={style.item}>
                     <img src={e} alt="Card" />
                   </div>
@@ -73,7 +73,7 @@ export const Home = () => {
           {data.cards.map((e, index) => {
             return (
               <SwiperSlide key={index}>
-                <Link to="#">
+                <Link to="/player/1234">
                   <Box sx={{ p: 1 }}>
                     <img src={e} alt="Card" />
                   </Box>
@@ -90,7 +90,7 @@ export const Home = () => {
           {data.cards.map((e, index) => {
             return (
               <SwiperSlide key={index}>
-                <Link to="#">
+                <Link to="/player/1234">
                   <Box sx={{ p: 1 }}>
                     <img src={e} alt="Card" />
                   </Box>
@@ -107,7 +107,7 @@ export const Home = () => {
           {data.cards.map((e, index) => {
             return (
               <SwiperSlide key={index}>
-                <Link to="#">
+                <Link to="/player/1234">
                   <Box sx={{ p: 1 }}>
                     <img src={e} alt="Card" />
                   </Box>

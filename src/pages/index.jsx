@@ -5,3 +5,4 @@ export { Shows } from "./shows/Shows";
 export { Music } from "./music/Music";
 export { Login } from "./login/Login";
 export { Movies } from "./movies/Movies";
+export { Player } from "./player/Player";

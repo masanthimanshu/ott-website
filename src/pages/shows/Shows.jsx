@@ -1,4 +1,5 @@
 import { Navigation } from "swiper";
+import { Link } from "react-router-dom";
 import data from "../../data/ImageData.json";
 import { PlayArrow } from "@mui/icons-material";
 import { Header } from "../../components/Header";
@@ -53,9 +54,11 @@ export const Shows = () => {
           {data.featured.map((e, index) => {
             return (
               <Grid key={index} item md={2}>
-                <div className={style.item}>
-                  <img src={e} alt="Card" />
-                </div>
+                <Link to="/player/1234">
+                  <div className={style.item}>
+                    <img src={e} alt="Card" />
+                  </div>
+                </Link>
               </Grid>
             );
           })}
@@ -68,9 +71,11 @@ export const Shows = () => {
           {data.cards.map((e, index) => {
             return (
               <SwiperSlide key={index}>
-                <Box sx={{ p: 1 }}>
-                  <img src={e} alt="Card" />
-                </Box>
+                <Link to="/player/1234">
+                  <Box sx={{ p: 1 }}>
+                    <img src={e} alt="Card" />
+                  </Box>
+                </Link>
               </SwiperSlide>
             );
           })}
@@ -83,9 +88,11 @@ export const Shows = () => {
           {data.cards.map((e, index) => {
             return (
               <SwiperSlide key={index}>
-                <Box sx={{ p: 1 }}>
-                  <img src={e} alt="Card" />
-                </Box>
+                <Link to="/player/1234">
+                  <Box sx={{ p: 1 }}>
+                    <img src={e} alt="Card" />
+                  </Box>
+                </Link>
               </SwiperSlide>
             );
           })}
@@ -98,9 +105,11 @@ export const Shows = () => {
           {data.cards.map((e, index) => {
             return (
               <SwiperSlide key={index}>
-                <Box sx={{ p: 1 }}>
-                  <img src={e} alt="Card" />
-                </Box>
+                <Link to="/player/1234">
+                  <Box sx={{ p: 1 }}>
+                    <img src={e} alt="Card" />
+                  </Box>
+                </Link>
               </SwiperSlide>
             );
           })}
