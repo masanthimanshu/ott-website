@@ -1,7 +1,7 @@
 import { useState } from "react";
 import style from "./style.module.css";
 import { Link } from "react-router-dom";
-import { Menu, Close } from "@mui/icons-material";
+import { Menu, Close, PersonOutline } from "@mui/icons-material";
 import {
   Box,
   Drawer,
@@ -13,6 +13,7 @@ import {
 } from "@mui/material";
 
 export const Header = () => {
+  const isLoggedIn = sessionStorage.getItem("isLoggedIn");
   const [active, setActive] = useState(false);
 
   return (
@@ -42,13 +43,23 @@ export const Header = () => {
               className={style.search_bar}
             />
           </Box>
-          <Link to="/login">
-            <Button variant="contained" color="error">
-              <Typography>
-                <b>Login</b>
-              </Typography>
-            </Button>
-          </Link>
+          {isLoggedIn == "true" ? (
+            <Link to="/login">
+              <Box sx={{ border: 2, borderRadius: "50%" }}>
+                <IconButton>
+                  <PersonOutline color="secondary" />
+                </IconButton>
+              </Box>
+            </Link>
+          ) : (
+            <Link to="/login">
+              <Button variant="contained" color="error">
+                <Typography>
+                  <b>Login</b>
+                </Typography>
+              </Button>
+            </Link>
+          )}
         </Toolbar>
       </AppBar>
 
@@ -79,7 +90,7 @@ export const Header = () => {
         <Box sx={{ pl: 4 }}>
           <Link to="/">
             <Typography color="white">
-              <b>HOME</b>
+              <b>Home</b>
             </Typography>
           </Link>
           <br />

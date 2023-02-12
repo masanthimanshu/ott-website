@@ -9,5 +9,5 @@ export const LoginKeeper = () => {
     login.current = true;
   }
 
-  return login.current ? <Navigate to="/home" replace /> : <Outlet />;
+  return login.current ? <Navigate to="/" replace /> : <Outlet />;
 };

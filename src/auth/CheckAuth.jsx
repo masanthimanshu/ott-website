@@ -9,5 +9,5 @@ export const CheckAuth = () => {
     login.current = true;
   }
 
-  return login.current ? <Outlet /> : <Navigate to="/" replace />;
+  return login.current ? <Outlet /> : <Navigate to="/login" replace />;
 };
