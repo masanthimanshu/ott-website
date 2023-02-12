@@ -1,0 +1,11 @@
+.search_bar {
+  border: 0;
+  width: 75%;
+  color: white;
+  padding: 1rem 0;
+  outline: inherit;
+  font-weight: bold;
+  text-indent: 1rem;
+  border-radius: 10px;
+  background-color: #252525;
+}

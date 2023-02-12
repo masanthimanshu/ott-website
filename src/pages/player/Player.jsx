@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Navigation } from "swiper";
 import { Link } from "react-router-dom";
 import data from "../../data/ImageData.json";
@@ -7,6 +8,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Box, Container, Typography } from "@mui/material";
 
 export const Player = () => {
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  }, []);
+
   return (
     <>
       <Header />
