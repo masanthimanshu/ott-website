@@ -22,3 +22,8 @@ img {
   width: 100%;
   border-radius: 5px;
 }
+
+iframe {
+  width: 48rem;
+  height: 27rem;
+}

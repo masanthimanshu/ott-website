@@ -1,6 +1,6 @@
-import { Navigation } from "swiper";
 import { Link } from "react-router-dom";
 import data from "../../data/ImageData.json";
+import { Navigation, Autoplay } from "swiper";
 import { PlayArrow } from "@mui/icons-material";
 import { Header } from "../../components/Header";
 import { Footer } from "../../components/Footer";
@@ -54,9 +54,9 @@ export const Music = () => {
           {data.featured.map((e, index) => {
             return (
               <Grid key={index} item md={2}>
-                <Link to="/player/1234">
+                <Link to={`/player/${e.id}`}>
                   <div className={style.item}>
-                    <img src={e} alt="Card" />
+                    <img src={e.image} alt="Card" />
                   </div>
                 </Link>
               </Grid>
@@ -67,13 +67,18 @@ export const Music = () => {
       <Container maxWidth="xl" sx={{ mt: 10, mb: 10 }}>
         <Typography variant="h5">Latest Movies</Typography>
         <br />
-        <Swiper modules={[Navigation]} slidesPerView={5} navigation>
+        <Swiper
+          modules={[Navigation, Autoplay]}
+          slidesPerView={5}
+          navigation
+          autoplay
+        >
           {data.cards.map((e, index) => {
             return (
               <SwiperSlide key={index}>
-                <Link to="/player/1234">
+                <Link to={`/player/${e.id}`}>
                   <Box sx={{ p: 1 }}>
-                    <img src={e} alt="Card" />
+                    <img src={e.image} alt="Card" />
                   </Box>
                 </Link>
               </SwiperSlide>
@@ -84,30 +89,18 @@ export const Music = () => {
       <Container maxWidth="xl" sx={{ mt: 10, mb: 10 }}>
         <Typography variant="h5">Top Web Series</Typography>
         <br />
-        <Swiper modules={[Navigation]} slidesPerView={5} navigation>
-          {data.cards.map((e, index) => {
+        <Swiper
+          modules={[Navigation, Autoplay]}
+          slidesPerView={5}
+          navigation
+          autoplay
+        >
+          {data.cards.reverse().map((e, index) => {
             return (
               <SwiperSlide key={index}>
-                <Link to="/player/1234">
+                <Link to={`/player/${e.id}`}>
                   <Box sx={{ p: 1 }}>
-                    <img src={e} alt="Card" />
-                  </Box>
-                </Link>
-              </SwiperSlide>
-            );
-          })}
-        </Swiper>
-      </Container>
-      <Container maxWidth="xl" sx={{ mt: 10, mb: 10 }}>
-        <Typography variant="h5">Trending Shows</Typography>
-        <br />
-        <Swiper modules={[Navigation]} slidesPerView={5} navigation>
-          {data.cards.map((e, index) => {
-            return (
-              <SwiperSlide key={index}>
-                <Link to="/player/1234">
-                  <Box sx={{ p: 1 }}>
-                    <img src={e} alt="Card" />
+                    <img src={e.image} alt="Card" />
                   </Box>
                 </Link>
               </SwiperSlide>

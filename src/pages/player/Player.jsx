@@ -1,32 +1,40 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Navigation } from "swiper";
-import { Link } from "react-router-dom";
 import data from "../../data/ImageData.json";
+import playerData from "../../data/allData.json";
 import { Header } from "../../components/Header";
 import { Footer } from "../../components/Footer";
+import { useParams } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Box, Container, Typography } from "@mui/material";
 
 export const Player = () => {
+  const { videoId } = useParams();
+  const [obj, setObj] = useState({});
+
+  const getData = () => {
+    playerData.filter((e) => e.id === videoId).map((e) => setObj(e));
+  };
+
   useEffect(() => {
+    getData();
+
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   }, []);
 
   return (
     <>
       <Header />
-      <Container maxWidth="xl">
-        <video width="100%" poster="/images/poster3.png" controls>
-          <source
-            src="https://assets.mixkit.co/videos/preview/mixkit-curvy-road-on-a-tree-covered-hill-41537-large.mp4"
-            type="video/mp4"
-          />
-          Your browser does not support HTML video.
-        </video>
-      </Container>
+      <Box sx={{ m: 4, textAlign: "center" }}>
+        <iframe
+          src={`https://www.youtube.com/embed/${obj.embedCode}`}
+          title="YouTube video player"
+          frameborder="0"
+        ></iframe>
+      </Box>
       <Container maxWidth="xl" sx={{ mt: 10, mb: 10 }}>
         <Typography variant="h3">
-          <b>Movie Name</b>
+          <b>{obj.name}</b>
         </Typography>
         <br />
         <br />
@@ -56,11 +64,11 @@ export const Player = () => {
           {data.cards.map((e, index) => {
             return (
               <SwiperSlide key={index}>
-                <Link to="#">
+                <a href={`/player/${e.id}`}>
                   <Box sx={{ p: 1 }}>
-                    <img src={e} alt="Card" />
+                    <img src={e.image} alt="Card" />
                   </Box>
-                </Link>
+                </a>
               </SwiperSlide>
             );
           })}

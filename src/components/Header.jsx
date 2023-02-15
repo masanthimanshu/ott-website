@@ -44,12 +44,13 @@ export const Header = () => {
             />
           </Box>
           {isLoggedIn == "true" ? (
-            <Link to="/login">
-              <Box sx={{ border: 2, borderRadius: "50%" }}>
-                <IconButton>
-                  <PersonOutline color="secondary" />
-                </IconButton>
-              </Box>
+            <Link to="/profile">
+              <div className={style.profile_btn}>
+                <PersonOutline color="secondary" />
+                <Typography sx={{ ml: 2 }}>
+                  <b>Himanshu</b>
+                </Typography>
+              </div>
             </Link>
           ) : (
             <Link to="/login">

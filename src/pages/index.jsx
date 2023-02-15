@@ -6,3 +6,4 @@ export { Music } from "./music/Music";
 export { Login } from "./login/Login";
 export { Movies } from "./movies/Movies";
 export { Player } from "./player/Player";
+export { Profile } from "./profile/Profile";

@@ -1,3 +1,12 @@
+import { Header } from "../../components/Header";
+import { Footer } from "../../components/Footer";
+
 export const Profile = () => {
-  return <div>Profile</div>;
+  return (
+    <>
+      <Header />
+      Profile
+      <Footer />
+    </>
+  );
 };
