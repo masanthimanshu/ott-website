@@ -14,14 +14,14 @@ export const Kids = () => {
       <Header />
       <section
         className={style.top_sec}
-        style={{ backgroundImage: "url('/images/poster5.png')" }}
+        style={{ backgroundImage: `url(${data.kids.image})` }}
       >
         <Container maxWidth="xl">
           <Grid container>
             <Grid item md={6}>
               <Box sx={{ mt: 5 }}>
                 <Typography variant="h2">
-                  <b>Chota Bheem</b>
+                  <b>{data.kids.name}</b>
                 </Typography>
                 <br />
                 <Typography>
@@ -37,11 +37,13 @@ export const Kids = () => {
                 </Typography>
                 <br />
                 <br />
-                <Button variant="contained" color="error">
-                  <PlayArrow />
-                  &nbsp;&nbsp;&nbsp;
-                  <b>Play Now</b>
-                </Button>
+                <Link to={`/player/${data.kids.id}`}>
+                  <Button variant="contained" color="error">
+                    <PlayArrow />
+                    &nbsp;&nbsp;&nbsp;
+                    <b>Play Now</b>
+                  </Button>
+                </Link>
               </Box>
             </Grid>
           </Grid>

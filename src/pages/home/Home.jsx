@@ -14,14 +14,14 @@ export const Home = () => {
       <Header />
       <section
         className={style.top_sec}
-        style={{ backgroundImage: "url('/images/poster1.png')" }}
+        style={{ backgroundImage: `url(${data.home.image})` }}
       >
         <Container maxWidth="xl">
           <Grid container>
             <Grid item md={6}>
               <Box sx={{ mt: 5 }}>
                 <Typography variant="h2">
-                  <b>PATHAAN</b>
+                  <b>{data.home.name}</b>
                 </Typography>
                 <br />
                 <Typography>
@@ -37,7 +37,7 @@ export const Home = () => {
                 </Typography>
                 <br />
                 <br />
-                <Link to="#">
+                <Link to={`/player/${data.home.id}`}>
                   <Button variant="contained" color="error">
                     <PlayArrow />
                     &nbsp;&nbsp;&nbsp;

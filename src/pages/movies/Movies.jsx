@@ -14,17 +14,14 @@ export const Movies = () => {
       <Header />
       <section
         className={style.top_sec}
-        style={{ backgroundImage: "url('/images/poster3.png')" }}
+        style={{ backgroundImage: `url(${data.movies.image})` }}
       >
         <Container maxWidth="xl">
           <Grid container>
             <Grid item md={6}>
               <Box sx={{ mt: 5 }}>
                 <Typography variant="h2">
-                  <b>URI</b>
-                </Typography>
-                <Typography>
-                  <b>The Surgical Strike</b>
+                  <b>{data.movies.name}</b>
                 </Typography>
                 <br />
                 <Typography>
@@ -40,11 +37,13 @@ export const Movies = () => {
                 </Typography>
                 <br />
                 <br />
-                <Button variant="contained" color="error">
-                  <PlayArrow />
-                  &nbsp;&nbsp;&nbsp;
-                  <b>Play Now</b>
-                </Button>
+                <Link to={`/player/${data.movies.id}`}>
+                  <Button variant="contained" color="error">
+                    <PlayArrow />
+                    &nbsp;&nbsp;&nbsp;
+                    <b>Play Now</b>
+                  </Button>
+                </Link>
               </Box>
             </Grid>
           </Grid>
