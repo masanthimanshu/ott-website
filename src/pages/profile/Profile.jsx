@@ -5,7 +5,7 @@ export const Profile = () => {
   return (
     <>
       <Header />
-      Profile
+      Profile Goes Here
       <Footer />
     </>
   );

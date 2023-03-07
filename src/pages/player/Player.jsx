@@ -1,10 +1,10 @@
-import { useEffect, useState } from "react";
 import { Navigation } from "swiper";
+import { useEffect, useState } from "react";
 import data from "../../data/ImageData.json";
 import playerData from "../../data/allData.json";
 import { Header } from "../../components/Header";
 import { Footer } from "../../components/Footer";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Box, Container, Typography } from "@mui/material";
 
@@ -20,18 +20,18 @@ export const Player = () => {
     getData();
 
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-  }, []);
+  }, [videoId]);
 
   return (
     <>
       <Header />
-      <Box sx={{ m: 4, textAlign: "center" }}>
+      <Container maxWidth="xl">
         <iframe
+          style={{ width: "100%", height: "100%", aspectRatio: "16 / 9" }}
           src={`https://www.youtube.com/embed/${obj.embedCode}`}
-          title="YouTube video player"
           frameborder="0"
         ></iframe>
-      </Box>
+      </Container>
       <Container maxWidth="xl" sx={{ mt: 10, mb: 10 }}>
         <Typography variant="h3">
           <b>{obj.name}</b>
@@ -64,11 +64,11 @@ export const Player = () => {
           {data.cards.map((e, index) => {
             return (
               <SwiperSlide key={index}>
-                <a href={`/player/${e.id}`}>
+                <Link to={`/player/${e.id}`}>
                   <Box sx={{ p: 1 }}>
                     <img src={e.image} alt="Card" />
                   </Box>
-                </a>
+                </Link>
               </SwiperSlide>
             );
           })}

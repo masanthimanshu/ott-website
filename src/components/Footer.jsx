@@ -4,7 +4,7 @@ import { Grid, Container, Box, Typography, IconButton } from "@mui/material";
 
 export const Footer = () => {
   return (
-    <>
+    <footer>
       <Container maxWidth="xl" sx={{ mb: 5 }}>
         <Grid container spacing={5}>
           <Grid item md={6}>
@@ -95,6 +95,6 @@ export const Footer = () => {
           <b>Copyright © All Rights Reserved</b>
         </Typography>
       </Box>
-    </>
+    </footer>
   );
 };

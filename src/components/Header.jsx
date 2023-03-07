@@ -17,7 +17,7 @@ export const Header = () => {
   const [active, setActive] = useState(false);
 
   return (
-    <>
+    <header>
       <AppBar
         open={active}
         elevation={0}
@@ -131,13 +131,6 @@ export const Header = () => {
           </Link>
         </Box>
       </Drawer>
-
-      <Box>
-        <br />
-        <br />
-        <br />
-        <br />
-      </Box>
-    </>
+    </header>
   );
 };

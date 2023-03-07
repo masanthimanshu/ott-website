@@ -49,7 +49,10 @@ export const Home = () => {
           </Grid>
         </Container>
       </section>
-      <Container maxWidth="xl" sx={{ mt: 10, mb: 10 }}>
+      <br />
+      <br />
+      <br />
+      <Container maxWidth="xl">
         <Typography variant="h5">Featured Shows</Typography>
         <br />
         <Grid container spacing={1}>
@@ -66,7 +69,10 @@ export const Home = () => {
           })}
         </Grid>
       </Container>
-      <Container maxWidth="xl" sx={{ mt: 10, mb: 10 }}>
+      <br />
+      <br />
+      <br />
+      <Container maxWidth="xl">
         <Typography variant="h5">Latest Movies</Typography>
         <br />
         <Swiper
@@ -88,7 +94,10 @@ export const Home = () => {
           })}
         </Swiper>
       </Container>
-      <Container maxWidth="xl" sx={{ mt: 10, mb: 10 }}>
+      <br />
+      <br />
+      <br />
+      <Container maxWidth="xl">
         <Typography variant="h5">Top Web Series</Typography>
         <br />
         <Swiper
