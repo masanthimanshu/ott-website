@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="OTT Website for Content Streaming" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="keywords" content="OTT Website" />
+    <meta name="theme-color" content="#000000" />
+    <title>OTT Website</title>
+    <link rel="icon" href="/images/icon.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="apple-touch-icon" href="/images/icon.png" />
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", function () {
+          navigator.serviceWorker.register("/serviceWorker.js").then(
+            function (registration) {
+              console.log(
+                "ServiceWorker registration successful : ",
+                registration.scope
+              );
+            },
+            function (err) {
+              console.log("ServiceWorker registration failed : ", err);
+            }
+          );
+        });
+      }
+    </script>
+  </body>
+</html>

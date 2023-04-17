@@ -1,0 +1,8 @@
+[
+  { "name": "Home", "url": "/category/home" },
+  { "name": "Shows", "url": "/category/shows" },
+  { "name": "Movies", "url": "/category/movies" },
+  { "name": "News", "url": "/category/news" },
+  { "name": "Kids", "url": "/category/kids" },
+  { "name": "Music", "url": "/category/music" }
+]

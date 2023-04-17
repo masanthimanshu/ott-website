@@ -1,0 +1,7 @@
+.item {
+  transition: transform 250ms ease-in-out 50ms;
+}
+
+.item:hover {
+  transform: scale(1.25) !important;
+}

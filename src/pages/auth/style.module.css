@@ -1,0 +1,18 @@
+.main_sec {
+  padding: 5rem 0;
+  background-size: cover;
+  background-blend-mode: color;
+  background-color: rgba(0, 0, 0, 0.75);
+  background-image: url(/public/images/login-bg.png);
+}
+
+.input_fields {
+  border: 0;
+  width: 100%;
+  color: white;
+  padding: 1rem 0;
+  outline: inherit;
+  font-weight: bold;
+  text-indent: 1rem;
+  background-color: #252525;
+}
