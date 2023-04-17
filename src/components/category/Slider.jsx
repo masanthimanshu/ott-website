@@ -97,7 +97,7 @@ export const TopCardSlider = ({ arr }) => {
                       </Typography>
                       <br />
                       <br />
-                      <Link to={`/player/${e.id}`}>
+                      <Link to={`/player/${e.id}`} id={`top-card-${index + 1}`}>
                         <Button variant="contained" color="error">
                           <PlayArrow />
                           &nbsp;&nbsp;&nbsp;
